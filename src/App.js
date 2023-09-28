@@ -52,10 +52,6 @@ function App() {
         if(item[1] === "not done"){
           item[1] = "done";
         }
-        // You can uncomment below code if you want to toggle between "done" and "not done".
-        // else{
-        //   item[1] = "not done";
-        // }
       }
     })
     // putting all the items which are "not done".
@@ -96,14 +92,6 @@ function App() {
       </div>
       <div className={styles.todoListContainer}>
         <div className={styles.list}>
-          <div className={styles.listItem}>
-            <div className={styles.name}>Go to gym at 6</div>
-            <div className={styles.status}>Not Done</div>
-          </div>
-          <div className={styles.listItem}>
-            <div className={styles.name}>Do DSA problems</div>
-            <div className={styles.status}>Not Done</div>
-          </div>
           {todos.map((item, index)=>{
             return(
               <div className={styles.listItem} key={index} onClick={()=>toggleStatus(index)}>

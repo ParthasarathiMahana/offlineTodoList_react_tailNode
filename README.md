@@ -20,5 +20,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### If we mark a task as "done" it will move to bottom.
 
 ### The tasks which is marked "done" recently will be on top of all the "done tasks".
-
-### You can toggle between "done" and "not done" by uncommenting the code I have commented out inside "toggle status" function.
