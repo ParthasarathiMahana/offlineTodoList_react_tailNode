@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  let [task, setTask] = useState([""]);
+  let [task, setTask] = useState(["",""]);
   let [todos, setTodos] = useState([]);
 
   useEffect(()=>{
@@ -31,6 +31,8 @@ function App() {
       setTodos(parsedLocalTodos);
       localStorage.setItem('todos', JSON.stringify(parsedLocalTodos));
     }
+
+    setTask(["",""])
   }
 
   function handleChangeTask(e){
@@ -84,7 +86,7 @@ function App() {
       <div className={styles.addForm}>
         <div className={styles.formContainer}>
           <form className={styles.form} onSubmit={(e)=>addNewTask(e)}>
-            <input type='text' onChange={(e)=>handleChangeTask(e)} defaultValue={task}></input>
+            <input type='text' onChange={(e)=>handleChangeTask(e)} value={task[0]}></input>
             <button type='submit'>Add Todo</button>
           </form>
         </div>
